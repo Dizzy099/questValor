@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %} Quest Valor Game lounge {% endblock %}</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Quest Valor Gaming lounge">
+	<meta name="keywords" content="gamelounge,eGaming, magazine, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="/static/img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Oswald|Source+Code+Pro" />
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../static/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../static/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="../static/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="../static/css/magnific-popup.css"/>
+	<link rel="stylesheet" href="../static/css/animate.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="../static/css/style.css"/>
+
+
+	
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-warp">
+			<div class="header-social d-flex justify-content-end">
+				<p>Follow us:</p>
+				<a href="#"><i class="fa fa-pinterest"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-behance"></i></a>
+			</div>
+			<div class="header-bar-warp d-flex">
+				<!-- site logo -->
+				<a href="{{ url_for('home') }}" class="site-logo">
+					<img src="/static/img/logo.png" alt="">
+				</a>
+				<nav class="top-nav-area w-100">
+					<div class="user-panel">
+						<a href="{{ url_for('login') }}">Login</a> / <a href="{{ url_for('register') }}">Register</a>
+					</div>
+					<!-- Menu -->
+					<ul class="main-menu primary-menu">
+						<li><a href="{{ url_for('contact') }}">Home</a></li>
+						<li><a href="{{ url_for('tournament') }}">Tournament</a></li>
+						
+
+						<li><a href="games.html">Games</a>
+							<ul class="sub-menu">
+								<li><a href="{{ url_for('pubg') }}">PUBG</a></li>
+							</ul>
+						</li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('blog') }}">News</a></li>
+						<li><a href="{{ url_for('contact') }}">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+	<main>
+        {% block content %}{% endblock %}
+    </main>
+
+	<!-- Featured section -->
+	<section class="featured-section">
+		<div class="featured-bg set-bg" data-setbg="/static/img/featured-bg.jpg"></div>
+		<div class="featured-box">
+			<div class="text-box">
+				<div class="top-meta">11.11.18  /  in <a href="">Games</a></div>
+				<h3>The game you've been waiting  for is out now</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquamet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum posuere porttitor justo id pellentesque. Proin id lacus feugiat, posuere erat sit amet, commodo ipsum. Donec pellentesque vestibulum metus...</p>
+				<a href="#" class="read-more">Read More  <img src="/static/img/icons/double-arrow.png" alt="#"/></a>
+			</div>
+		</div>
+	</section>
+	<!-- Featured section end-->
+
+
+
+	<!-- Newsletter section -->
+	<section class="newsletter-section">
+		<div class="container">
+			<h2>Subscribe to our newsletter</h2>
+			<form class="newsletter-form">
+				<input type="text" placeholder="ENTER YOUR E-MAIL">
+				<button class="site-btn">subscribe  <img src="/static/img/icons/double-arrow.png" alt="#"/></button>
+			</form>
+		</div>
+	</section>
+	<!-- Newsletter section end -->
+
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-left-pic">
+				<img src="/static/img/footer-left-pic.png" alt="">
+			</div>
+			<div class="footer-right-pic">
+				<img src="/static/img/footer-right-pic.png" alt="">
+			</div>
+			<a href="#" class="footer-logo">
+				<img src="/static/img/logo.png" alt="">
+			</a>
+			<ul class="main-menu footer-menu">
+				<li><a href="">Home</a></li>
+				<li><a href="">Games</a></li>
+				<li><a href="">Reviews</a></li>
+				<li><a href="">News</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+			<div class="footer-social d-flex justify-content-center">
+				<a href="#"><i class="fa fa-pinterest"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-behance"></i></a>
+			</div>
+			<div class="copyright"><a href="">Quest Valor</a> </div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="/static/js/jquery-3.2.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/jquery.slicknav.min.js"></script>
+	<script src="/static/js/owl.carousel.min.js"></script>
+	<script src="/static/js/jquery.sticky-sidebar.min.js"></script>
+	<script src="/static/js/jquery.magnific-popup.min.js"></script>
+	<script src="/static/js/main.js"></script>
+
+	</body>
+</html>
